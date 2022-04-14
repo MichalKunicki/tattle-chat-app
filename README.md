@@ -7,7 +7,7 @@ Showcase of a stream-chat-react engine and a basic ExpressJS backend set-up buil
 
 
 ## Tech Stack
-React
-ExpressJS
-Stream-Chat-React
-Axios
+- React
+- ExpressJS
+- Stream-Chat-React
+- Axios
