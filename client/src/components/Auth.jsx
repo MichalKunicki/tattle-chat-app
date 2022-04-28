@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Cookies from "universal-cookie";
 import axios from "axios";
+import bg from "../assets/bg.jpg";
 
 const cookies = new Cookies();
 
@@ -59,7 +60,10 @@ const Auth = () => {
 
   return (
     <div className="auth__form-container">
-      <div className="auth__form-container_fields">
+      <div
+        style={{ backgroundImage: `url(${bg})` }}
+        className="auth__form-container_fields"
+      >
         <div className="auth_form-logo">
           <h1>Tattle</h1>
         </div>
@@ -68,7 +72,7 @@ const Auth = () => {
           <form onSubmit={handleSubmit}>
             {isSignup && (
               <div className="auth__form-container_fields-content_input">
-                <label htmlFor="fullName">Full Name</label>
+                <label htmlFor="fullName">Full Name*</label>
                 <input
                   name="fullName"
                   type="text"
@@ -79,7 +83,7 @@ const Auth = () => {
               </div>
             )}
             <div className="auth__form-container_fields-content_input">
-              <label htmlFor="username">Username</label>
+              <label htmlFor="username">Username*</label>
               <input
                 name="username"
                 type="text"
@@ -96,7 +100,6 @@ const Auth = () => {
                   type="text"
                   placeholder="Phone Number"
                   onChange={handleChange}
-                  required
                 />
               </div>
             )}
@@ -108,12 +111,11 @@ const Auth = () => {
                   type="text"
                   placeholder="Avatar URL"
                   onChange={handleChange}
-                  required
                 />
               </div>
             )}
             <div className="auth__form-container_fields-content_input">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">Password*</label>
               <input
                 name="password"
                 type="password"
@@ -124,7 +126,7 @@ const Auth = () => {
             </div>
             {isSignup && (
               <div className="auth__form-container_fields-content_input">
-                <label htmlFor="confirmPassword">Confirm Password</label>
+                <label htmlFor="confirmPassword">Confirm Password*</label>
                 <input
                   name="confirmPassword"
                   type="password"

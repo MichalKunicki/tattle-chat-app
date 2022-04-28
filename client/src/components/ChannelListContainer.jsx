@@ -25,7 +25,7 @@ const SideBar = ({ logout }) => (
 
 const CompanyHeader = () => (
   <div className="channel-list__header">
-    <p className="channel-list__header__text">Private Trading Chat</p>
+    <p className="channel-list__header__text">Tattle Chat</p>
   </div>
 );
 
